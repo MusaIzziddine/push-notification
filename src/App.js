@@ -76,7 +76,7 @@ class App extends Component {
                     <button type="button" className="btn btn-danger" onClick={this.clearChat}>Clear</button>
                 </div>
             </div>
-            <SockJsClient url='http://localhost:8080/gs-guide-websocket' topics={['/topic/greetings']}
+            <SockJsClient url='https://push-notification-spring-musa.herokuapp.com/gs-guide-websocket' topics={['/topic/greetings']}
                           onMessage={(msg) => { this.appendToData(msg);  }}
                           onConnect={ () => console.log('connect') }
                           onDisconnect={ () => console.log('disconnect')}
